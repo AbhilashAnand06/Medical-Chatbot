@@ -221,3 +221,24 @@ border-radius: 0 0 15px 15px !important;
 	margin-bottom: 15px !important;
 }
 }
+.user-message {
+    background: #e0f7fa;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 8px;
+    text-align: right;
+}
+
+.bot-message {
+    background: #f1f8e9;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.sources {
+    font-size: 0.8em;
+    color: gray;
+    margin-left: 10px;
+}

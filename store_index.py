@@ -8,8 +8,13 @@ from langchain_pinecone import PineconeVectorStore
 load_dotenv()
 
 
-PINECONE_API_KEY=os.environ.get('PINECONE_API_KEY')
-OPENAI_API_KEY=os.environ.get('OPENAI_API_KEY')
+PINECONE_API_KEY = os.environ.get('PINECONE_API_KEY')
+OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
+
+if PINECONE_API_KEY is None:
+    raise EnvironmentError("PINECONE_API_KEY environment variable is not set")
+if OPENAI_API_KEY is None:
+    raise EnvironmentError("OPENAI_API_KEY environment variable is not set")
 
 os.environ["PINECONE_API_KEY"] = PINECONE_API_KEY
 os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
